@@ -47,22 +47,22 @@ public class Main {
 //      ArrayList - 1차원, 2차원
         System.out.println("== ArrayList ==");
         ArrayList list1 = new ArrayList(Arrays.asList(1, 2, 3)); // Arrays.asList()를 통해 ArrayList 생성 시 데이터를 바로 추가해줄 수 있다.
-        System.out.println("list1 = " + list1);
+        System.out.println("list1 = " + list1); // list1 = [1, 2, 3]
         list1.add(4); // ArrayList 생성 뒤에 add()를 통해 데이터를 추가할 수 있다.
         list1.add(5);
-        System.out.println("list1 = " + list1);
+        System.out.println("list1 = " + list1); // list1 = [1, 2, 3, 4, 5]
         list1.remove(2); // remove()를 통해 해당 인덱스의 데이터를 삭제할 수 있다. 해당 인덱스 뒤의 데이터는 앞 당겨진다(인덱스가 변경됨).
-        System.out.println("list1 = " + list1);
+        System.out.println("list1 = " + list1); // list1 = [1, 2, 4, 5]
         list1.remove(Integer.valueOf(2)); // 인덱스가 아닌 값을 통해 데이터를 삭제할 수 있다.
-        System.out.println("list1 = " + list1);
+        System.out.println("list1 = " + list1); // list1 = [1, 4, 5]
 
         ArrayList list2d = new ArrayList(); // 빈 ArrayList 생성
         ArrayList list1d1 = new ArrayList(Arrays.asList(1, 2, 3)); // ArrayList 1
         ArrayList list1d2 = new ArrayList(Arrays.asList(4, 5, 6)); // ArrayList 2
         list2d.add(list1d1); // 빈 ArrayList의 데이터로 ArrayList를 추가.
         list2d.add(list1d2); // 빈 ArrayList의 데이터로 ArrayList를 추가. 즉 2차원 ArrayList가 되는 것임..!
-        System.out.println("list1d1 = " + list1d1);
-        System.out.println("list1d2 = " + list1d2);
-        System.out.println("list2d = " + list2d);
+        System.out.println("list1d1 = " + list1d1); // list1d1 = [1, 2, 3]
+        System.out.println("list1d2 = " + list1d2); // list1d2 = [4, 5, 6]
+        System.out.println("list2d = " + list2d); // list2d = [[1, 2, 3], [4, 5, 6]]
     }
 }

@@ -1,10 +1,30 @@
-package lineardatastructure.lds_04_linkedlist;// Practice1
-// 단순 연결 리스트 구현 완성
+package lineardatastructure.singlelinkedlist;
 
-class LinkedList2 extends LinkedList {
+class Node {
+    int data;
+    Node next;
 
-    LinkedList2(Node node) {
+    Node() {}
+    Node(int data, Node next) {
+        this.data = data;
+        this.next = next;
+    }
+}
+
+class LinkedList {
+    Node head;
+
+    LinkedList() {}
+    LinkedList(Node node) {
         this.head = node;
+    }
+
+
+    public boolean isEmpty() {
+        if (this.head == null) {
+            return true;
+        }
+        return false;
     }
 
     //연결 리스트에 데이터 추가
@@ -58,19 +78,50 @@ class LinkedList2 extends LinkedList {
             cur = cur.next;
         }
     }
+
+    public void findData(int data) {
+        if (this.isEmpty()) {
+            System.out.println("List is empty");
+            return;
+        }
+
+        Node cur = this.head;
+        while (cur != null) {
+            if (cur.data == data) {
+                System.out.println("Data exist!");
+                return;
+            }
+            cur = cur.next;
+        }
+        System.out.println("Data not found!");
+    }
+
+    public void showData() {
+        if (this.isEmpty()) {
+            System.out.println("List is empty");
+            return;
+        }
+
+        Node cur = this.head;
+        while (cur != null) {
+            System.out.print(cur.data + " ");
+            cur = cur.next;
+        }
+        System.out.println();
+    }
 }
 
-public class Practice1 {
-    public static void main(String[] args) {
 
-//      Test code
-        LinkedList2 myList = new LinkedList2(new Node(1, null));
+
+public class SingleLinkedListExample {
+    public static void main(String[] args) {
+        LinkedList myList = new LinkedList(new Node(1, null));
         myList.showData();         // 1
 
-        myList.addData(2);
-        myList.addData(3);
-        myList.addData(4);
-        myList.addData(5);
+        myList.addData(2, null);
+        myList.addData(3, null);
+        myList.addData(4, null);
+        myList.addData(5, null);
         myList.showData();         // 1 2 3 4 5
 
         myList.addData(100, 1);
