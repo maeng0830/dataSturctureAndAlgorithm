@@ -1,5 +1,5 @@
 // https://www.acmicpc.net/problem/2884
-package baekjoon.bj2884;
+package baekjoon.bronze.bj2884;
 
 import java.io.BufferedReader;
 import java.io.IOException;
